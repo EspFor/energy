@@ -25,10 +25,8 @@ df <- as.data.frame(jsonlite::fromJSON(url))
 get_production <- function(.df = df, powerplant = "Aall-Ulefoss"){
 
 .df %>%
-    filter(navn == {{powerplant}}) %>%
-    group_by(navn) %>%
-    summarise(Yearly_production = MidProd_81_10) %>%
-    select(MidProd_81_10)
+    dplyr::filter(Navn == {{powerplant}}) %>%
+    dplyr::select(MidProd_81_10)
 
 }
 
