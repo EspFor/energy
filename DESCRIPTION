@@ -1,13 +1,13 @@
 Package: energy
-Title: What the Package Does (One Line, Title Case)
+Title: Energy production data
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Espen",
+           family = "Forså",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
+           email = "espen.forsaa@pwc.com",
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: What license it uses
+Description: Fetches and analyses energy production data fra NVE.
+License: None
 Encoding: UTF-8
 LazyData: true
