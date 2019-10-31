@@ -11,3 +11,5 @@ Description: Fetches and analyses energy production data fra NVE.
 License: None
 Encoding: UTF-8
 LazyData: true
+Suggests: 
+    testthat
