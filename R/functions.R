@@ -10,7 +10,7 @@ get_energy_data <- function(){
 
 url <- "https://www.nve.no/umbraco/api/Powerplant/GetHydroPowerPlantsInOperation"
 df <- as.data.frame(jsonlite::fromJSON(url))
-
+df
 }
 
 #' Get production of power plant
@@ -24,11 +24,13 @@ df <- as.data.frame(jsonlite::fromJSON(url))
 #' @examples
 get_production <- function(.df = df, powerplant = "Aall-Ulefoss"){
 
-.df %>%
-    dplyr::filter(Navn == {{powerplant}}) %>%
-    dplyr::select(MidProd_81_10)
+pp_df <- .df %>%
+            dplyr::filter(Navn == {{powerplant}}) %>%
+            dplyr::select(MidProd_81_10)
 
+return(as.numeric(pp_df$MidProd_81_10))
 }
+
 
 
 
